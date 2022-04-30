@@ -1,0 +1,80 @@
+// git config --list
+
+1- git init
+
+Cria a estrutura inicial do repositório Git no computador local.
+
+2- git status
+
+Verifica o status das alterações realizadas no repositório.
+
+3- git add
+
+Adiciona arquivos ao histórico do projeto, na staging.
+
+4- git commit
+
+Registra/salva a alteração no repositório.
+
+5- git log
+
+Permite visualizar as alterações feitas.
+
+6- git show número-do-commit
+
+Permite visualizar informações sobre qualquer commit.
+
+7- git remote add origin "destino"
+
+Informa a pasta remota.
+
+8- git remote -v
+
+Permite visualizar o repositório remoto.
+
+9- git push -u origin master
+
+Publica as alterações no repositório remoto.
+
+10- git pull
+
+Baixa as alterações no repositório remoto.
+
+11- git checkout -b tarefa/minha-primeira-branch
+
+Cria uma branch
+O parâmetro "–b" é utilizado para informar que desejamos criar uma branch e que esse ramo ainda não existe.
+
+12- git pull origin (nome da branch)
+
+Realizar o download das informações fornecidas pela outra branch
+
+13- git merge (nome da branch)
+
+Fazer a mesclagem com a outra branch
+
+14- git tag -a v1.0 -m "minha primeira tag"
+
+Criação de tags
+
+15- git tag
+
+ver as tags
+
+16- git show v1.0
+
+Para ver informações sobre uma tag específica, como a v1.0
+
+17- git push origin --tags
+
+Jogar as tags para o repositório remoto
+
+Os próximos passos serão:
+
+1-iniciar o repositório - comando git init;
+2-criar um arquivo de texto dentro do repositório;
+3-rastrear alterações no repositório - comando git status;
+4-adicionar versão no repositório - comando git add;
+5-verificar alterações antes de salvar - comando git status;
+6-salvar alterações - comando git commit; e
+7-visualizar log da alteração - comando git log.

@@ -1,5 +1,11 @@
 // git config --list
 
+Códigos extras:
+
+git remote add origin https://github.com/lucas3146/exercicios.git
+git branch -M main
+git push -u origin main
+
 1- git init
 
 Cria a estrutura inicial do repositório Git no computador local.

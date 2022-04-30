@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de exercícios</title>
+    <script src=" https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Site dos meus exercícios</h1>
+        <p>Exercicios que você encontra em livros e sites serão disponibilizados nessa página.</p>
+    </header>
+
+    <main>
+        <section>
+            <h1 class="exercicios">Transformando quadrado em bola</h1>
+            <div class="quadrado"></div>
+            <br>
+            <button class="btquadrado">Transforma</button>
+            <p>Nesse execício, utilizamos a biblioteca Jquery do JavaScript, para transformar um quadrado em uma bola.
+                Muito fácil utilizar essa tecnologia, o segreo está em adicionar uma class chamada de 'circulo' em uma
+                div, com configurações estilizadas no CSS. </p>
+            <h1 class="exercicios" id="p-bezier">A função cubic-bezier()</h1>
+
+            <p>Passe o mouse sobre o elemento div abaixo para ver o efeito de transição.</p>
+
+            <div id="bezier"></div>
+
+            <p><b>Observação:</b> este exemplo não funciona no Internet Explorer 9 e em versões anteriores.</p>
+            <h1 class="exercicios" id="fundo">Mudando a Cor de fundo com JS.</h1>
+            <div id="mudafundo">
+                <p>Clique no botão para mudar a cor do background do div.</p>
+                <button class="botao">Mudar a cor de fundo</button>
+            </div>
+            <!-- A função document.querySelector serve para selecionar 
+            um elemento no código HTML5. A função random gera um 
+            número aleatório. A última função manipula um evento. 
+            O onClick define quando o usuário pode clicar sobre 
+            um botão. A variável rndColor está recebendo um valor
+            RGB. Perceba que é utilizada aspas simples ‘. Na
+            segunda função foi criado um valor random para buscar
+            um número aleatório, ou seja, o sistema retornará um 
+            número aleatório de 0 até 255. Foram passados três,
+            pois a junção do RGB (red, green e blue) gera uma cor.
+            Na última linha do código, antes de fechar o escopo
+            (chave }), o documento HTML5, em seu body todo 
+            (largura e altura), receberá um style de backgroundColor 
+            aleatório. -->
+        </section>
+    </main>
+    <script>
+        $('button').click(function () {
+            $('.quadrado').toggleClass('circulo')
+        })
+
+        var btn = document.querySelector('.botao');
+
+        function random(number) {
+            return Math.floor(Math.random() * (number + 1));
+        }
+
+        btn.onclick = function () {
+            var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+            document.querySelector('#mudafundo').style.backgroundColor = rndCol;
+        }
+    </script>
+</body>
+
+</html>

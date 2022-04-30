@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+/* Minha paleta de cores::after
+cor1: #1E2BFD
+cor2: #1B5BE3
+cor3: #2AA2FA*/
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+
+body {
+    background-color: #1e29fde7;
+}
+
+main {
+    min-width: 320px;
+    max-width: 900px;
+    background-color: white;
+    margin: auto;
+    box-shadow: 0px 5px 6px 0px #242424;
+    padding: 30px;
+}
+
+main>section>p {
+    text-align: justify;
+    text-indent: 40px;
+    margin-top: 20px;
+}
+
+header {
+    background-image: linear-gradient(to top, rgb(53, 53, 53), rgb(87, 87, 87));
+    padding: 20px 0px;
+    height: 100px;
+    text-align: center;
+    box-shadow: 0px 3px 3px rgba(49, 49, 49, 0.418);
+}
+
+header>h1 {
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.692);
+}
+
+header>p {
+    margin-top: 10px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.692);
+}
+
+section {
+    text-align: center;
+}
+
+
+
+section .exercicios {
+    margin-top: 20px;
+    background-image: linear-gradient(to right, yellow, transparent);
+    padding: 0px 5px;
+    text-align: left;
+    color: white;
+    text-shadow: 2px 2px 3px rgb(54 54 54);
+    margin-bottom: 20px;
+    border-radius: 5px;
+
+}
+
+.quadrado {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: all 2s;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.circulo {
+    background-color: yellow;
+    border-radius: 50%;
+    transform: rotate(720deg);
+}
+
+section #bezier {
+    width: 100px;
+    height: 100px;
+    background: turquoise;
+    transition: width 1s;
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+    margin: auto;
+}
+
+section #bezier:hover {
+    width: 300px;
+}
+
+#p-bezier {
+    background-image: linear-gradient(to right, turquoise, transparent);
+}
+
+#mudafundo {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    padding: 10px;
+    background-color: red;
+}
+
+#fundo {
+    background-image: linear-gradient(to right, red, transparent);
+}

@@ -1,0 +1,1982 @@
+				AULA 5: A ESTRUTURA DE UM PROJETO C#
+
+// O c# possui uma série de arquivos e pastas que contém arquivos de configurações entre outros.
+
+Toda aplicação tem um método main, ele também é chamado de método de arranque/principal da aplicação. Quando executamos uma aplicação, primeiro é inicializado o método main, e a partir dele, é desencadeado todos os outros métodos dessa aplicação
+
+// No caso do exemplo da aula 5, temos que o arquivo 'program.cs' é aquele que possui o método main.
+
+Form1.cs são arquivos que são gerados em projetos com um ambente gráfico. Por isso que projetos de linhas de comando ele se torna ausente.
+
+O Form1.cs é dividido em duas partes:
+
+- Form1Designer.cs
+
+// Que contém todo o código que é gerado pelo visual studio, quando colocamos botões, janelas, acessórios em geral.
+// Por trás de toda interface gráfica existe um código fonte
+
+- Form1.resx
+
+// é a segunda parte, pois o visual studio em c# permite dividir códigos fontes em duas partes
+
+App.config
+
+- é um arquivo de configurações que não pode/deve ser alterado
+
+Referências
+
+- É um arquivo de referências que contém todas as namespace que podemos utilizar
+
+- Namespace são bibliotecas que possui itens que podemos utilizar, nele contém um conjunto de funconalidades/objetos relacionados.
+
+- Por exemplo o 'system.windows.forms' é de extrema importância, pois sem ele, não seria capaz de desenvolver aplicações de interface gráficas utilizando o C#
+
+// Cada namespace é utilizado para uma finalidade específica.
+// Podemos utilizar namespaces que nós mesmos podemos criar com finalidades específicas.
+// Podemos também exportar namespace de terceiros.
+// Tudo isso vamos desenvolver nesse curso.
+
+Properties
+
+// Possui as propriedades do nosso projeto, que é formado por um conjunto de três arquivos. Tudo é gerado automaticamente, mas podemos alterá-los.
+
+- Ele possui diversas configurações que podemos alterar para trabalhar com a nossa aplicação.
+
+Todos esses arquivos são gerados altomaticamente quando criamos o nosso projeto no Visual Studio, e normalmente não vamos precisar alterar eles manualmente. O próprio Visual Studio vai alterá-lo conforme desenvolvemos o nosso projeto.
+
+
+				AULA: 6
+
+			CONHECENDO A SINTAXE E ESTRUTURA DO CÓDIGO FONTE
+
+Nas primeiras linhas de um código fonte do arquivo que estamos trabalhando, vamos declarar os namespace
+
+Colocamos a diretiva 'using' e o nome do namespace e por fim ponto e vírgula.
+
+// Mas não basta apenas declara, é de extrema importância que ele esteja disponível lá nas referências, se não estiver disponível, ele não vai poder ser exportado, consequentemente, sem a importação, não é possivel gerar a interface gráfica do software, o que geraria um erro.
+
+Depois devemos declarar um namespace com um nome do nosso projeto, é necessário essa declaração, pois serve para referir esse arquivo na compilação e assim ser incluido nos arquivos do nosso projeto.
+
+Toda codificação do nosso software tem que estar dentro do namespace que criamos para que esse possa ser referenciado, por isso é de grande importância as chaves, que determina o escopo do nosso projeto. Caso a codificação esteja fora do escopo gerará um erro.
+
+Então para agrupar um conjunto de declarações, abrimos e fechamos chaves.
+
+Dentro das chaves, está declarado no exemplo uma classe 'Form1'
+
+Dentro da classe declaramos os métodos e atributos que fazem parte dessa classe. OU SEJA É A PARTE EM QUE MAIS VAMOS PROGRAMAR!!.
+
+// Quais são esses atributos e métodos? Vamos estudando...
+
+C# é uma linguagem de programção case sensitive, ou seja, há diferença entre letras maiúsculas e minúsculas.
+
+
+				AULA 7
+
+			COMPILAÇÃO E EXECUÇÃO DE CÓDIGO
+
+Compilador é um programa que transforma o código que os humanos conseguem entender para a linguagem de máquina, e essa possa processar os dados.
+
+Breakpoints são usados como debug para analisar o código passo a passo para facilitar a aleitura e ver onde está o erro. Onde está o breakpoint significa que o programa vai iniciar até o ponto (breakpoint) que está o código. Ses apertar em continuar, ele vai para o próximo breakpoint, se continuarmos ele vai até o fim, e iniciar o programa.
+
+Há um botão chamado 'step into' que ao clicarmos nele, vai iniciar o programa passso por passo.
+
+Step out volta para o ponto anterior.
+
+Build >> Build Solution >> Se houver alguma modificação no código o programa vai recompilar o código-fonte.
+
+Build >> Rebuild solution >> Recompila mesmo se não houve uma modificação
+
+
+				AULA 8
+
+			COMENTÁRIOS DE CÓDIGO FONTE
+
+Para marcar comentários, basta colocar duas barras para comentários de uma linha '//'.
+
+Par comentários de mais linhas '/**/'.
+
+comandos que vimos nessa aula:
+
+- Console.WriteLine("Ola Mundo !");
+
+// Console é a classe 
+// WriteLine é o método, ele imprime uma mensagem no console, que é o prompt de comando
+
+- Console.ReadKey();
+
+// O método ReadKey faz o programa esperar, até o usuário apertar uma tecla e seguir com o programa.
+
+				AULA 9
+
+				BLOCOS REGION
+
+para abertura de blocos:
+
+#region
+
+para fechamento de blocos:
+
+#endregion
+
+
+				AULA 10
+
+			VARIÁVEIS E TIPOS DE DADOS
+
+- No desenvolvimetnode programas um recurso muito utilizado é a variável.
+
+- As variáveis são espaços reservds na memória do computdor para armzenar dados temporariamente durnte a execução do programa, sejam estes dados números, nomes, datas, ou qualquer outro tipo de dados necessário para a aplicação.
+
+- As variáveis são utilizdas para armazenar informações na memória em tempo de execução da aplicaçao, isso significa que esss informações estarão disponíveis enquanto a aplicação estiver em execução e, mais precisamente, em quanto a classe ou método em que ela foi criada estiver em execução.
+
+- Todas as variáveis e objetos devem ter um tipo declarado.
+
+- Os tipos de dados são divididos em tipos por valor e tipos por referênia.
+
+- As variáveis de tipo por valor armazenam um valor especificamente, enquanto as de tipo por referência contém a referência de um objeto.
+
+- Isso significa que se copiar uma variável de por valor para dentro de outra, o valor é copiado e, se o mesmo for feito com uma de tipo por referência será copiado apenas a referência do objeto.
+
+- Com tipos de referência, é possivel que duas variáveis referenciam o mesmo objeto e, portanto, é possivel que operações em uma variável afetem o objeto referenciado por outra variável.
+
+- Com tipos por valor, cada variável tem sua própria cópia dos dados e não é possivel que operações em um afetem o outro.
+
+- O valor atribuído a uma variável deve estar de acordo com o seu tipo declarado
+
+- Por exemplo uma variável declarada como de tipo numérico inteiro, não pode receber um valor numérico real (número com casas decimais).
+
+				AULA 11
+
+			TIPOS NUMERICOS INTEIRO (VALUE TYPE)
+
+Para declarar uma variavel é preciso declarar o tipo de variável, dar um nome, e atribuir um valor com o simbolo '='(sinal de atribuição).
+
+Já sabemos de quais nomes podem e não podem ser utilizados.
+
+Os tipos de variaveis abrangem determinados numeros de acordo com a sua memoria
+
+sbyte num = 256;  // Não podemos utilizar isso pelo fato de 256 passar da abrangência que esse tipo de variavel suporta.
+
+Abrangências numéricos de acordo com o tipo de variavel e espaço reservado na memória.
+
+// Integral assinado
+            sbyte num1 = 10; 	// 8 bits, de -128 a 127
+            short num2 = 20; 	// 16 bits, -32.768 a 32.767
+            int num3 = 30; 	// 32 bits, -2.147.483.648 a -2.147.483.648
+            long num4 = 40L; 	// 64bits, -9.223.372.036.854.775.808 a -9.223.372.036.854.775.807
+
+// Integral sem sinal
+            byte num5 = 10; 	// 8 bits, intervalo de 0 a 255
+            ushort num6 = 20; 	// 16 bits, de 0 a 65.535
+            uint num7 = 30; 	// 32 bits, de 0 a 4.294.967.295
+            ulong num8 = 40L; 	// 64 bits, de 0 a 18.446.774.073.709.551.615
+
+De acordo com a nossa codificação, vamos alterar as variáveis no decorrer do código.
+
+				AULA 12
+
+			TIPOS NUMERICOS REAIS (VALUE TYPE)
+
+tipos numericos real (do tipo ponto flutuante), é caracterizado por ter casa decimais no seu numero.
+
+Tipo		Tamanho		abrangência								valor padrão		exemplo de uso
+
+float		4bytes		-3.402823e38...3.402823e38						0			float varFloat = 0f;
+
+double		8bytes		-1.79769313486232e308..-1.79769313486232e308				0			double varDouble = 0.0;
+
+decimal		16bytes		-79228162514264337593543950335...-79228162514264337593543950335		0			decimal varDecimal = 0.0m;
+
+
+float real1 = 100f; // 32 bits, intervalo de 1,5 x 1045 a 3,4 x 1038, precisão de 7 digitos => Sufixo f, Ex.: 10.5f
+
+a linguagem c# precisa atribuir o 'f'/'F' depois do numero float, sempre qundo quisermos referenciar esse numero no nosso codigo de forma literal, se você se atentou ao exemplo, pôde perceber que o programa não constatou nenhum erro, por que o próprio visual studio entendeu esse valor e relacionou a um utro tipo especifico.
+
+double real2 = 500.754f; // 64 bits, intervalo de 5,0 x 10-324 a 1,7 x 10308, precsão de 15 digitos => Sufixo d (opcional, Ex: 10.5d
+
+Como podemos ver para esse tipo de variavel, é opcional a escolha de sufixo depois de cada numero declarado, seja inteiro ou real.
+
+decimal real3 = 752538.457m // 128 bits, intervalo de pelo menos -7,9 x 10-28 a 6,9 x 1028, com precisão de pelo menos 28 digitos => Sufixo m, Ex.: 10.5m
+
+o tipo de variavel decimal é um tipo especial, pois não está disponivel em algumas linguagens de programação. O tipo decimal se torna obrigatório o uso do 'm'/'M' no final do numero.
+
+
+				AULA 13
+
+			TIPO CARACTERE (VALUE TYPE)
+
+
+Tipo		Tamanho		abrangência								valor padrão		exemplo de uso
+
+CHAR		2 BYTES		U+0000 .. U+FFFFF							'\0' (U+0000)		char varChar = 'C';
+
+// Todos os caracteres do planeta podem ser escritos em códigos do tipo hexadecimal (\u0061 > a), o conjunto de caracteres do planeta é também conhecido como UTF-16.
+
+
+// Caracteres especiais como: '\n' > quebra de linha; '\0' > caractere nulo; '\\' > caractere de escape (\)
+
+
+CÓDIGO UTILIZADO NA AULA:
+
+char letra = '\u0041';
+char escape = '\n';
+char literal = 'C';
+
+Console.WriteLine(escape);
+Console.ReadKey();
+
+				AULA 14
+
+			TIPO BOOLEAN (VALUE TYPE)
+
+Tipo		Tamanho		abrangência								valor padrão		exemplo de uso
+
+bool		1 byte		true / false								false			bool varBool = false;
+
+
+CÓDIGO DA AULA:
+
+bool verificar = false;
+verificar = true;
+
+Console.WriteLine();
+Console.ReadKey();
+
+				AULA 15
+
+			TIPO STRING - CADEIA DE CARACTERES (REFERENCE TYPE)
+
+TIPO			VALOR PADRÃO			EXEMPLO DE USO
+
+String			null				string varString = null;
+	
+							string varString = "texto";
+
+CÓDIGO DA AULA:
+
+string texto = "Gabriel Artigas\\n 1985 @@@???$$";
+string mensagem = null;
+mensagem = texto;
+
+Console.WriteLine(mensagem);
+Console.ReadKey();
+
+// Se deixássemos apenas '\n' ele iria interpretar isso como um caractere de quebra linha.
+// Desse modo '\\n' mostrará no console '\n'
+// Mas há outro forma: string texto = @"Gabriel Artigas\\n 1985 @@@???$$", repare no arroba, ele vai fazer o texto seja interpretado apenas por caracteres simples;
+
+
+TIPO			TIPO IMPLÍCITO				EXEMPLO DE USO
+
+var 			int					var varNum = 0;
+
+var 			string					var varTxt = "texto"
+
+var 			int[]					var varVetor = new[] {0,1,2};
+
+// Uma variável tipo var é fortemente tipada, como se você mesmo tivesse declarado o tipo, ou seja, ao iniciarmos essa variável o computador define o seu tipo implicitamente.
+
+// Uma variável tipo var, não tem o seu valor definido na sua declaração.
+
+// O seu valor/tipo de dado a partir do momento em que ela for inicializada, e dali ela vai assumir esse tipo até o final da sua execução
+
+// Às vezes, com o decorrer do nosso programa precisaremos receber tipos de dados diferentes seja simultaneamente ou não, por isso a variável do tipo 'var' é tão importante, pois deixa o próprio computador identificar qual é o tipo de dado que estamos trabalhando.
+
+CÓDIGO DA AULA:
+
+var valor = false;
+
+Console.WriteLine();
+Console.ReadKey();
+
+// var valor = "Gabriel";
+// var valor = 140;
+
+// Porém tem uma exceção, a partir do momento que foi definido o seu valor, ela vai assumir o seu valor até o final, portanto, não será possivel alterar mais a sua variável.
+
+// Ela pode ser utilizada para realizar operações matemáticas
+
+// Ela também pode assumir valores derivados de classes.
+
+				AULA 16
+
+			TIPO OBJECT (REFERENCE TYPE)
+
+TIPO				VALOR PADRÃO				EXEMPLO DE USO
+
+Object				null					object varObject = null;
+
+									object varObject = new Tipo();
+
+									object varObject = object;
+
+// Todos os tipos definidos e pré-definidos pelo usuário, tipos de referência ou por valor, está relacionado direto ou indiretamente da classe system.object
+
+CÓDIGO DA AULA:
+
+object obj = false;
+
+Console.WriteLine();
+Console.ReadKey();
+
+// object = "Gabriel";
+// object = 19726;
+
+// Todos os outros tipos de variáveis herdam diretamente desse tipo object, que é diferente do tipo var, que não tinha um tipo de dado definido, mas a partir do momento que ela era inicializada com esse valor, ela assumia esse valor até o final de execução, já a do tipo object não é que ela vai assumir aquele valor até o final, porque ela não assume valores, ela é a base para todos os outros valores.
+
+// o tipo object apenas comporta os tipos por ser a base de todos os valores, ela não pode ser usada para realizar operações matemáticas.
+
+// Ela não está sendo tratado nem como string, numero inteiros, ou valores booleanos, eles vão ser tratados como objetos, por isso esses valores não vão ser usados para sua finalidade específica.
+
+// Os objects são utilizados para armazenar objetos derivados de classes, que nada mais é do que variáveis derivadas de classes. Normalmente, as classes possuem um tipo prórpio dfinido, e por ela ter esse tipo próprio definido, podemos criar variáveis de objetos para todos os tipos de valores.
+
+				AULA 
+			
+				CONSTANTES
+
+
+const double pi = 3.1415; // Número pi nunca muda, é uma constante.
+
+CÓDIGO DA AULA:
+
+const double pi = 3.1415;
+const string nome = "Gabriel";
+
+Console.WriteLine(pi);
+Console.ReadKey();
+
+// A constantes podem ser de qulquer tipo e de qualquer valor que definimos.
+
+				AULA: ENUM (VALUE TYPE)
+
+// O tipo de enumerações fornece uma maneira eficiente para definir o conjunto de constantes integrais nomeadas que podem ser atribuidas a um valor.
+
+// Para entender sobre enumerações, é mais fácil entender na prática
+
+// Então suponhamos: temos uma aplicação que vai dar pontuações pro usuário e dali o nosso usuário vai receber essa pontuação como um valor numérico. Agora para saber qual a nota que ele tirou, ele vai precisar conhecer a escala desses valores. Então ele poderia tirar o numero 5, se a escala fosse entre 0 e 10, 5 seria uma nota média, se a escala fosse entre 0 e 5, seria a nota máxima, ou seja, para que o usuário saiba da sua nota ele precisa conhecer a escala de pontuação, mas de repente nem todo mundo conhece por algum motivo. Por isso, podemos nomear essas constantes que são os valores, para que ele consiga interpretar melhor que tipo de pontuação ele tirou, que são as enumerações.
+
+// Vamos definir uma enumeração que vai guardar de 3 tipos de valores que vamos utilizar na nossa aplicação para definir pontuações por exemplo de usuários. Então essa enumeração vai guardar o mínimum, medium e maximum. E dali vamos utilizar essa aplicação para que fique mais fácil de entender que tipo de ponto o usuário recebeu.
+
+CÓDIGO DE AULA:
+
+class Program
+{
+
+	enum Notas 
+	{
+		Minimo, Media, Maxima    // Não é necessário o ponto e vírgula, apenas a separação dos valores com vírgula.
+	}				 // Se passar o mouse em cima, vai notar que minimo, media e maxima possui indices 0, 1, 2.
+	static void Main(string[] args)
+
+	Notas notasAlunos = Notas.Media	 // Ao atribuir o ponto, o programa te dará a opção de escolher entre o minimo, media e maxima com os seus respectivos indices.
+	
+	Console.WriteLine();
+	Console.ReadKey();
+}
+
+// Então é desse jeito que funciona o tipo de variável enum, é como se você tivesse criando um próprio tipo de variável que contém valores definidos que podemos utilizar.
+
+// Mas é claro que é possivel também alterar os valores dos indices das notas
+//
+// enum Notas 
+//	{
+//		Minimo = 10, Media = 15, Maxima = 20   
+//	}			
+
+// A partir das enumerações também é possivel criar códigos de erro da minha aplicação.	 
+
+
+				AULA: STRUCT (VALUE TYPE)
+
+// Estruturas
+
+// Um tipo de estrutura é um tipo de valor que pode encapsular dados e funcionalidades relacionadas. Isso quer dizer na prática que eu posso criar uma estrutura de dados para armazenar valores relacionados a um tipo.
+
+// Suponhamos que: iremos criar um sistema de cadastro para cadastrar os usuários. E ao invés de eu definir variáveis para todos os tipos de valor que eu quero, por //exemplo o nome, altura e a idade da pessoa, então eu não preciso criar todas as variáveis separadas, eu posso criar uma estrutura que englobe todas essas variáveis,
+
+//para isso:
+
+CÓDIGO DE AULA:
+
+class Program
+{
+
+	enum Notas 
+	{
+		Minimo, Media, Maxima    // Não é necessário o ponto e vírgula, apenas a separação dos valores com vírgula.
+	}				 // Se passar o mouse em cima, vai notar que minimo, media e maxima possui indices 0, 1, 2.
+
+	struct Pessoa
+	{
+		public string nome;	// O public é um modificador de acesso e está relacionado à visibilidade, se não declarássemos, ele não iria ficar visivel 			
+		public int idade;	// nossas variáveis que criamos a partir da nossa estrutura.
+		public double altura;
+	}
+
+	// Repare que não podemos atribuir um valor para a variável, é preciso que ela fique ali apenas declarada.
+
+	static void Main(string[] args)
+	{
+
+	Pessoa p1 = new Pessoa();	// é preciso determinar um new Pessoa(), pois assim, podemos criar quantas pessoas nós quisermos.
+	p1.nome = "Lucas"
+	p1.altura = 1.75;
+	p1.idade = 18;
+
+	Pessoa p2 = new Pessoa()
+	{
+	    nome = "Gustavo", 		// Nesse caso não é necessário colocar ponto e virgula, apenas virgula.
+	    idade = 16,
+	    altura = 1.72
+	};
+	
+	p1.nome = "Logan";
+	
+	Console.WriteLine(p1.nome);
+	Console.WriteLine(p1.idade);
+	Console.WriteLine(p1.altura);
+
+	Console.WriteLine();
+	
+	Console.WriteLine(p2.nome);
+	Console.WriteLine(p2.idade);
+	Console.WriteLine(p2.altura);
+
+	Console.ReadKey();
+}
+
+// Console:
+
+Logan
+35
+1,65
+
+Arthur
+9
+1,35
+
+
+Diferenças entre classe e struct:
+
+Classes são reference types. Isto é, seus valores são passados por referência para o mesmo espaço de memória. Já Structs são value types. Ou seja, seus valores são copiados para um novo espaço de memória.
+
+// Structs, também conhecidas como Registros, definem tipos de dados que agrupam variáveis sob um mesmo tipo de dado.
+
+A ideia de usar uma struct é permitir que, ao armazenar os dados de uma mesma entidade, isto possa ser feito com uma única variável. Por exemplo, se for preciso armazenar a altura, o peso e a idade de uma pessoa, pode-se criar uma struct chamada Pessoa e agrupar os dados em um único tipo de dado, conforme o exemplo a seguir.
+
+
+				AULA:   MÉTODOS DE ENTRADA E SAÍDA DE DADOS EM C# (IN-OUT)
+
+ENTRADA
+|
+|
+|
+V
+PROCESSAMENTO <------> ARMAZENAMENTO
+|
+|
+|
+V
+SAÍDA
+
+// Entrada e saída de dados nada mais é do que o poder que temos em nos comunicar com a máquina.
+
+// Periféricos de entrada: teclado, mouse, leitor de código...
+// Processamento: pega dados e processa-os da forma como queremos
+// Periféricos de saída: monitores, impressoras...
+
+// O comando 'Console.Write("Lucas")' não faz a quebra de linha, consequentemente, se imprimissemos uma nova palavra, essa iria aparecer ao lado.
+
+// Sabemos que todos os caracteres possuem um código por trás deles, seja em forma hexadecimal, decimal, binário, etc... No C# por exemplo, temos que o código:
+// Console.Read();  --> Faz com que o usuário informe um caractere e esse, será transformado para o código desse mesmo.
+// Por isso, podemos armazenar esse código em uma variável qualquer do tipo inteiro, e após isso imprimir na tela.
+
+CÓDIGO DA AULA:
+
+// Console.WriteLine("Gabriel");
+// Console.Write("Lucas");
+
+int codigo = Console.Read();
+Console.WriteLine(codigo);
+
+Console.ReadKey;
+
+// No entanto o método Read() captura apenas o primeiro caractere. 
+// O método 'ReadLine()' vai pegar os caracteres digitados pelo usuário e armazenar em uma string, só não podemos esquecer de criar a variável.
+
+CONTINUAÇÃO DO CÓDIGO:
+
+// Console.WriteLine("Gabriel");
+// Console.Write("Lucas");
+
+string texto = Console.ReadLine();
+Console.WriteLine(codigo);
+
+Console.ReadKey;
+
+CONSOLE:
+
+Lucas Lima (digitei)
+Lucas Lima (O console mostrou)
+
+			AULA: EXERCICIO INVERTER NOMES
+
+// Nessa aula temos que criar quatro variáveis para inserirmos através do console 4 nomes, e armazenar esses nas suas respectivas variáveis, com o decorrer do programa, ele precisa inverter os valores que inserimos nas variáveis. Tudo isso para trabalhar um pouco com alógica de programação
+
+CÓDIGO DA AULA:
+
+string nome1, nome2, nome3, nome4, auxiliar;		// Precisamos criar uma variável 'auxiliar'... Pois através dela que as variáveis vão se sobrescrever e armazenar os seus 						// valores
+						// Pois, se a não tivesse, seus valores seriam perdidos.
+Console.Write("Digite o nome #1: ");
+nome1 = Console.ReadLine();
+
+Console.Write("Digite o nome #2: ");
+nome2 = Console.ReadLine();
+
+Console.Write("Digite o nome #3: ");
+nome3 = Console.ReadLine();
+
+Console.Write("Digite o nome #4: ");
+nome4 = Console.ReadLine();
+
+// Mecanismo para inverter os nomes
+
+auxiliar = nome1;
+nome1 = nome4;
+nome4 = auxiliar;
+auxiliar = nome2;
+nome2 = nome3;
+nome3 = auxiliar;
+
+Console.WriteLine();
+Console.WriteLine("Nomes inseridos na sequência invertida");
+Console.WriteLine(nome1);
+Console.WriteLine(nome2);
+Console.WriteLine(nome3);
+Console.WriteLine(nome4);
+
+					AULA: CONVERSÃO IMPLICITA DE TIPOS NUMÉRICOS
+
+
+
+// Olhe a imagem(na section 6) que mostra quais tipos numéricos podem ser convertidos para seus respectivos tipos numéricos.
+
+// Qualquer que seja o valor que caiba na variável do tipo byte, cabe no tipo ushort, pois este, possui o dobro de memória que o 'byte', e ainda sobre espaço. Por isso, valores menores que o suporte do byte aguenta deve ser colocados no byte, caso contrário, ocupará memória desnecessariamente.
+
+// O compilador permite sem nenhuma dificuldade colocar variaveis do tipo byte em variaveis do tipo ushort, pois ele tem certeza que o seu valo é cabível, esse processo chama-se compilação implícita.
+
+// A conversão implicita serve também para variáveis do tip real/float.
+
+// O conjunto dos numeros reais engloba também os numeros inteiros, por isso, a conversão implicita permite colocar valores do int nas variaveis tipos float.
+
+CÓDIGO DA AULA:
+
+byte num1 = 100;  // 8 bits, de 0 a 255
+ushort num2;  // 16 bits, de 0 a 65.535
+
+float num3 = 1250.45f;
+double num4 = num3;
+
+num3 = num1;
+
+num2 = num1;
+
+Console.WriteLine(num2);
+Console.ReadKey();
+
+// No entanto, é incorreto dizer que:
+// num1 = num2;
+// Pois o tipo num1 não suporta o num2.
+
+// Por isso, deve-se sempre perceber a abrangência dos tipos de variáveis
+
+// Obs: Os valores tipos char, são valores caracteres, no entanto, podemos colocar esses valores em uma variavel do tipo numérica (ex.: Int) pois os caracteres possuem códigos que são representados por numeros.
+
+CÓDIGO DA AULA:
+
+byte num1 = 100;  // 8 bits, de 0 a 255
+ushort num2;  // 16 bits, de 0 a 65.535
+
+float num3 = 1250.45f;
+double num4 = num3;
+
+num3 = num1;
+
+num2 = num1;
+
+char letra = 'C';
+// int numero = letra;  // Resulta em um erro, não por causa do valor ser do tipo char, mas pelo fato de igualar duas variaveis de tipos diferentes.
+
+int numero = 'C';       // Está correto, pois o código do glifo 'C', pode ser representado por numeros em decimal.
+
+Console.WriteLine(numero);
+Console.ReadKey();
+
+CONSOLE:
+
+67
+
+// Repare que a saída não imprimiu a forma gráfica do caractere 'C', mas sim seu código escrito em decimal.
+
+
+					AULA: CONVERSÃO EXPLÍCITA DE TIPOS NUMÉRICOS
+
+// A conversão explicita - conhecida como 'cast' - é realizada quando há necessidade de converter um valor e pode acontecer perda de informações. para fazer isso, basta declarar antes do nome da variável.
+
+// Sabemos que na conversão implicita, é um tipo de conversão segura, pois os valores cabiam dentro das variáveis que estavam sendo declaradas
+
+// A conversão explicita é justamente o contrário, pois a variável que irá receber aquele valor não suporta aqueles tipos de dados. Então pode acontecer a perda de dados, ou não, dependendo da situação, por esse motivo, o sistema não permite que façamoos a conversão explicita, portanto, ele nos obriga que, se quisermos fazer esse tipo de conversão, que façamos um código especial antes de declararmos aa variáveis.
+
+CÓDIGO DE AULA:
+
+ushort num1 = 100;
+byte num2 = (byte)num1;
+
+Console.WriteLine(num2);
+Console.ReadKey();
+
+// Se colocarmos esse código no VS, você vai reparar que o programa vai indicar um erro, pois o ushort possui uma abrangência maior que o byte, podendo ocorrer perda de dados. Por isso coloque o tipo de variável que vocÊ quer fazer a conversão entre parênteses antes do nome da variável.
+
+CONSOLE:
+
+100
+
+// Não houve perda de dados, pois o 100 cabe tanto na abrangência do tipo ushort, quanto no byte, no entanto, mesmo especificando o cast antes da variável, forçando o programa, pode haver perda de dados, se o numero que queremos colocar na variável é maior do que a sua abrangência.
+
+CÓDIGO DE AULA:
+
+ushort num1 = 500;
+byte num2 = (byte)num1;
+
+Console.WriteLine(num2);
+Console.ReadKey();
+
+CONSOLE:
+
+244
+
+
+OUTROS TIPOS DE CONVERSÃO EXPLICITA
+
+CÓDIGO DE AULA:
+
+ushort num1 = 500;
+byte num2 = (byte)num1;
+
+float num3 = 2500.758f;
+int num4 = (int)num3;
+
+char letra = (char)97;
+
+Console.WriteLine(letra);
+Console.ReadKey();
+
+CONSOLE:
+
+a
+
+// Normalmente um numero não pode ser atribuido a uma variavel do tipo char, mas se convertermos com o cast, ele identificará esse numero como o sendo do código decimal de uma letra.
+
+
+				AULA: MÉTODO PARSE
+
+// O método parse converte a representação de cadeia de caracteres do tipo string de um número no formato numérico correspondente.
+
+CÓDIGO DE AULA:
+
+string txtNumero = "1985";
+
+int numero = int.Parse(txtNumero);
+
+byte num1 = byte.Parse("1985"); 	// Repare que pode ser usado na sua forma literal.
+
+double num2 = double.Parse("125623.57")	// Esse valor escrito dessa forma, resultará em erro, pois um valor real expresso em casas decimais deve ser expresso com 					// vírgula e não com ponto
+
+float num3 = float.Parse("457,75");	// Correto
+
+Console.WriteLine(numero);
+Console.ReadKey();
+
+// A cadeia de caracteres contido na string, tem que ser uma representação que lembre um numero, caso contrário, resultará em erro.
+
+	
+				AULA: CLASSE CONVERT
+
+// Fora os outros tipos de conversão que tivemos, e diferente dos outros tipos de conversão que tivemos, onde  convertemos valores numéricos para outros tipos numéricos, ou representação de strings para valores numéricos, a classe convert pode converter qualquer tipo de dado, para qualquer tipo de dado, tudo isso através dos seus métodos disponíveis. Por exemplo:
+
+CÓDIGO DE AULA:
+
+string texto = Convert.ToString(2500);
+
+// Vai converter qualquer valor passado pelo parâmetro para o tipo String.
+
+double num1 = Convert.ToDouble(false);
+
+// vai retornar um numero decimal representativo do false
+
+int num2 = Convert.ToInt32('C');
+
+// Se executarmos o console, você vai perceber que vai funcionar de boa, no entanto, passarmos um valor do tipo char para double, resultará em um erro, pois nem sempre ele aceita todos os tipos de conversão.
+
+Console.WriteLine(texto);
+Console.WriteLine(num1);
+Console.WriteLine(num2);
+Console.ReadKey();
+
+CONSOLE:
+
+2500
+0
+67
+
+
+				AULA: OPERADORES ARITMÉTICOS
+
+CÓDIGO DE AULA:
+
+int num1 = 15;
+int num2 = 2;
+
+// int resultado = num1 + num2;
+
+Console.WriteLine(num1 + num2);
+Console.WriteLine(num1 - num2);
+Console.WriteLine(num1 * num2);
+Console.WriteLine(num1 / num2);
+Console.WriteLine(num1 % num2);
+
+Console.ReadKey();
+
+CONSOLE:
+
+17
+13
+30
+7
+1
+
+				AULA: ORDEM DE PRIORIDADE
+
+OPERAÇÃO
+
+operações entre parênteses		()
+
+Multiplicação ou Divisão		* /
+
+Adição ou Subtração			+ -
+
+OPERAÇÃO			RESULTADO
+
+5 + 5 * 2				15
+
+(5 + 5) * 2				20
+
+CÓDIGO DE AULA:
+
+double num1 = 100;
+double num2 = 10;
+double num3 = 5;
+
+double res = (num1 + num2) * (num3 / 3);
+
+Console.WriteLine(res);
+Console.ReadKey();
+
+CONSOLE:
+
+183.33333
+
+				AULA: OPERADRES DE INCREMENTO
+
+++		a++/++a		a = a + 1 (A recebe o resultado da soma de A + 1)
+
+--		a--/--a		a = a - 1 (A recebe o resultado da subtração de A - 1)
+
+CÓDIGO DE AULA:
+
+int num1 = 10;
+
+// num1 = num1 + 1;
+num1--;	
+// Mesma a coisa que a de cima.
+
+Console.WriteLine(num1);
+Console.ReadKey();
+
+CONSOLE:
+
+9
+
+// Existe o pré incremento/decremento que se for escrito dessa maneira:
+
+int num1 = 10;
+
+Console.WriteLine(++num1);
+Console.ReadKey();
+
+CONSOLE:
+
+11
+
+// Será impresso 11, como o '++' vem antes do 'num1', isso significa que primeiro é incrementado, depois é impresso, mas se for:
+
+int num1 = 10;
+
+Console.WriLine(num1++);
+Conosle.ReadKey();
+
+CONSOLE:
+
+10
+
+// Primeiro o número vai ser impresso, depois será incrementado.
+
+int num1 = 10;
+
+Console.WriteLine(num1++);
+Console.WriteLine(num1);
+Console.ReadKey();
+
+CONSOLE:
+
+10
+11
+
+CÓDIGO DE AULA:
+
+int num1 = 10;
+
+num1++;
+++num1;
+num2++;
+++num2;
+
+Console.WriteLine(num1)
+Console.ReadKey();
+
+				AULA: OPERADOR DE CONCATENAÇÃO
+
+CÓDIGO DE AULA:
+
+string nome = "Lucas ";
+string sobreNome = "Lima";
+string nomeCompleto = nome + sobreNome + " " + 2003;
+
+Console.WriteLine(nome);
+Console.ReadKey();
+
+CONSOLE:
+
+Lucas Lima 2003
+
+				AULA: OPERADORES DE ATRIBUIÇÃO
+
+operador
+
+  =		a = b			A recebe o mesmo valor de B
+
+ +=		a += b			a = a + b (A recebe o resultado da soma de A + B)
+
+ -=		a -= b			a = a - b (A recebe o resultado da subtração de A -B)
+
+ *=		a *= b			a = a * b (A recebe o resultado da multiplicação de A * B)
+
+ /=		a /= b			a = a / b (A recebe o resultado da divisão de A / B)
+
+ %=		a %= b			a = a % b (A recebe o resultado do resto da divisão de A / B)
+
+
+CÓDIGO DE AULA:
+
+int num1 = 10;
+
+//num1 = num1 + 20;
+//num1 += 20;
+//num1 -= 2;
+//num1 *= 3;
+//num1 /= 2;
+//num1 %= 2;
+
+string nome "Gabriel";
+nome += " Artigas";
+
+Console.WriteLine(nome);
+Console.ReadKey();
+
+CONSOLE:
+
+Gabriel Artigas
+
+
+				AULA: OPERADORES DE IGUALDADE
+
+Operação		Operador		Exemplo de condição		Significado da condição
+
+Igual que		==			x==y				x é igual que y
+
+Diferente de 		!=			x!=y				x é diferente de y
+
+CÓDIGO DE AULA:
+
+bool res = 100 == 50 * 2;
+bool res2 = 200 != 100 + 100;
+
+string nome = "Gabriel";
+bool res3 = nome == "Gabriel";
+
+Console.WriteLine(res);
+Console.WriteLine(res2);
+Console.WriteLine(res3)
+Console.ReadKey();
+
+CONSOLE:
+
+True
+False
+True
+
+
+				AULA: OPERADORES RELACIONAIS
+
+Operação			Operador			Exemplo de condição			Significado da condição
+
+Maior que 		>			x > y					x é maior que y
+Menor que 		<			x < y					x é menor que y
+Maior ou igual que 		>=			x >= y					x é maior que ou igual a y
+Menor ou igual que 		<=			x<=y					x é menor que ou igual a y
+
+
+CÓDIGO DE AULA:
+
+// bool res = 100 < 50 * 2;
+// bool res = 100 + 25 > 50 * 2;
+// bool res = 100 <= 50 * 2;
+bool res = 100 + 25 >= 50 * 2;
+
+Console.WriteLine(res);
+Console.ReadKey();
+
+CONSOLE:
+
+True
+
+
+				AULA: OPERADORES LÓGICOS
+
+Operador				Operação				Utilização
+
+&&				AND				Utilizando quando desejamos que as duas expressões sejam verdadeiras.
+||				OR				Utilizado quando precisamos que pelo menos uma das expressões seja verdadeira.
+
+
+Operador				Exemplo de condição		Significado da condição
+
+&&				(a>b) && (x == y)			A é maior que B e X é igual a Y
+||				(a>b) || (x == y)			A é maior que B ou X é igual a Y
+
+
+CÓDIGO DE AULA:
+
+bool res1 = 100 > 50;
+//bool res2 = 50 != 50;
+
+//bool final1 = res1 && res2;
+bool final2 = res1 || res2;
+
+Console.WriteLine(final1);
+Console.WriteLine(final2);
+Console.ReadKey();
+
+CONSOLE:
+
+False
+
+// O operador 'and' exige que as duas expressões lógicas sejam verdadeiras para que ele retorne True
+// O operador 'or' exige que pelo menos uma das expressões seja verdadeiro para que o resultado seja True
+
+
+				AULA: EXERCÍCIO CONVERSOR DE TEMPERATURAS
+
+CÓDIGO DE AULA:
+
+double c, f, k;
+
+Console.WriteLine("### CONVERSOR DE TEMPERATURAS ###");
+Console.Write("Insira a temperatura em Celsius: ");
+c = double.Parse(Console.ReadLine());
+Console.WriteLine("-----------------------------");
+
+// (c * 9 / 5) + 32 = F
+f = (c * 9 / 5 ) + 32;
+
+// c + 273.15 = K
+k = c + 273.15
+
+Console.WriteLine(c + " graus celsius =  " + f + " graus fahrenheit");
+Console.WriteLine(c + " graus celsius =  " + k + " kelvin");
+Console.WriteLine("-----------------------------");
+Console.ReadKey();
+
+CONSOLE:
+
+### CONVERSOR DE TEMPERATURAS ###
+Insira a temperatura em Celsius:  25
+-----------------------------
+25 graus celsius = 77 graus fahrenheit
+25 graus celsius = 298,15 graus fahrenheit
+-----------------------------
+
+
+				AULA: VETOR / ARRAY UNIDIMENSIONAL
+
+			VETOR DE TIPO INTEIRO
+
+Indice		0	1	2	3	4
+Elemento		18	32	15	4	7
+
+			VETOR DE TIPO STRING
+
+Indice		0	1	2	3	4
+Elemento		carro	casa	moto	chão	pedra
+
+CÓDIGO DE AULA:
+
+int numero = 0;
+
+int[] numeros = new int[5];
+numeros[0] = 10;
+numeros[1] = 20;
+numeros[2] = 30;
+numeros[3] = 40;
+numeros[4] = 50;
+
+numeros[2] = 55;
+
+//numeros[7] = 70;   // error, fora do limite da matriz
+
+string[] nomes = new string[3];
+string[0] = "Lucas";
+string[1] = "Josy";
+string[2] = "Gustavo";
+
+// Mas também podemos declarar os valores a partir da inicialização do próprio vetor.
+
+string[] nomes = {"Lucas", "Gustavo", "Josy"};
+
+Console.WriteLine(numero[2]);
+Console.WriteLine(nomes[0]);
+Console.WriteLine(nomes[2]);
+Console.ReadKey();
+
+
+CONSOLE:
+
+55
+Lucas
+Josy
+
+				AULA: MATRIZ: ARRAY BIDIMENSIONAL
+
+		Coluna 1		Coluna 2		Coluna 3		Coluna 4		Coluna 5
+
+Linha 1		A		B		C		D		E
+
+Linha 2		F		G		H		I		J
+
+Linha 3		K		L		M		N		O	
+
+Linha 4		P		Q		R		S		T
+
+Linha 5		U		V		W		X		Y
+
+
+// Para fazer referência do array bidimensional, informamos o indice da inha e da coluna do ele em questão.
+// A virgula dentro dos parênteses determina que esse array é do tipo bidimensional.
+
+CÓDIGO DE AULA:
+
+int[,] numeros = new int[2,3];
+
+numeros[0,0] = 10;
+numeros[0,1] = 20;
+numeros[0,2] = 30;
+
+numeros[1,0] = 40;
+numeros[2,1] = 50;
+numeros[3,2] = 60;
+
+//Console.WriteLine(numeros[0,1]);
+Console.Write("[" + numeros[0,0] + "]");
+Console.Write("[" + numeros[0,1] + "]");
+Console.Write("[" + numeros[0,2] + "]");
+
+Console.WriteLine();
+
+Console.Write("[" + numeros[1,0] + "]");
+Console.Write("[" + numeros[1,1] + "]");
+Console.Write("[" + numeros[1,2] + "]");
+
+string[,] nomes = 
+{
+	{"Lucas", "Gustavo", "Josy"},
+	{"Gabriel", "Danny", Arthur"}
+}
+Console.WriteLine();
+Console.WritLine(nomes[0,1]);
+Console.ReadKey();
+
+CONSOLE:
+
+[10][20][30]
+[40][50][60]
+Gustavo
+
+				AULA: EXERCICIO - MULTIPLICAÇÃO DE MATRIZES
+
+
+// A multiplicação de matrizes deve seguir a metodologia que foi aprendida na matemática para fazer tal operação.
+
+// linhas multiplicam suas respectivas colunas, ou seja, os dados da primeira linha, devem multiplicar os dados da primeira coluna, e assim por diante.
+
+// Podemos saber qual será o número de linhas e colunas da matriz resultante de uma multiplicação de matrizes. Para sabermos isso, basta saber o numero de linhas da primeira coluna, essa será o numero de linhas da matriz resultante, e o número de colunas da segunda matriz será o numero de colunas da matriz resultante:
+
+// Não é todo caso em que a multiplicação de matrizes resultará em outra matriz, para saber isso, iguale o numero de linhas de uma matriz ao numero de colunas da outra, e vice-versa, se for verdadeiro, a matriz resultante existe
+
+// Na multiplicação de matrizes a ordem dos fatores alteram o produto:  A x B != B x A, em poucos casos esse caso é diferente ou seja, a ordem dos fatores não alteram o produto, mas são casos específicos.
+
+A2x3 X B3x2 = C2x2
+
+CÓDIGO DE AULA:
+
+int[,] matriz1 = new int[2, 3];
+int[,] matriz2 = new int[3, 2];
+int[,] resultado = new int[2, 2];
+
+Console.WriteLine("Preencher a matriz #1");
+for (int linha = 0; linha < 2; linha++)
+{
+	for (int coluna = 0; coluna < 3; coluna++)
+	{
+		Console.Write("#1. Posição [" + linha + ", " + coluna + "] = ");
+		matriz1[linha, coluna] = int.Parse(Console.ReadLine());
+	}
+}
+Console.WriteLine("Preencher a matriz #2");
+for (int linha = 0; linha < 3; linha++)
+{
+	for (int coluna = 0; coluna < 2; coluna++)
+	{
+		Console.Write("#1. Posição [" + linha + ", " + coluna + "] = ");
+		matriz2[linha, coluna] = int.Parse(Console.ReadLine());
+	}
+}
+Console.WriteLine("Matriz resultante da multiplicação das outras duas: ");
+resultado[0, 0] = (matriz1[0, 0] * matriz2[0, 0]) + (matriz1[0, 1] * matriz2[1, 0]) + (matriz1[0, 2] * matriz2[2, 0]);
+resultado[0, 1] = (matriz1[1, 0] * matriz2[1, 0]) + (matriz1[1, 1] * matriz2[1, 1]) + (matriz1[1, 2] * matriz2[1, 2]);
+resultado[1, 0] = (matriz1[0, 0] * matriz2[0, 0]) + (matriz1[0, 1] * matriz2[1, 0]) + (matriz1[0, 2] * matriz2[2, 0]);
+resultado[1, 1] = (matriz1[1, 0] * matriz2[1, 0]) + (matriz1[0, 1] * matriz2[1, 1]) + (matriz1[1, 2] * matriz2[1, 2]);
+for (int i = 0; i < 2; i++)
+{
+	for(int j = 0; j < 2; j++)
+	{
+	Console.WriteLine("resultado [ " + i + ", " + j + "] = [ " + resultado[i, j] + " ]");
+	}
+}
+
+
+				AULA: ESTRUTURAS CONDICIONAIS
+
+- As estruturas condicionais possibilitam ao programa tomar decisões e alterar o seu fluco de execução
+
+- É por meio delas que podemos dizer ao sistema: "Execute a instrução A caso a expressão X seja verdadeira; caso contrário, execute a instrução B".
+
+- Uma condição é uma expressão que pode ser verdadeira ou falsa, ou seja retornar um valor booleano (true/false).
+
+- As condições nas operações podem ser formadas utilizando os operadores de igualdade e os operadores relacionais.
+
+- Todos os operadores relacionais tem o mesmo nível de precedência e são associados da esquerda para a direita.
+
+				AULA: ESTRUTURAS CONDICIONAIS SIMPLES (IF-ELSE)
+
+CÓDIGO DE AULA:
+
+int valor = 5;
+
+if (valor == 10)
+{
+	Console.WriteLine("Condição verdadeira!");
+}else {
+	Console.WriteLine("Condição retornou falsa!");
+}
+
+Console.ReaKey();
+
+CONSOLE:
+
+Condição retornou falsa!
+
+				AULA: ESTRUTURAS ENCADEADAS (IF...ELSE IF... ELSE)
+
+int valor = 25;
+
+if (valor < 5)
+{
+	Console.WriteLine("Valor é menor que 5");
+}else if (valor >= 5 && valor < 10)
+{
+	Console.WriteLine("Valor é maior ou igual a 5 e menor que 10");
+}
+else if(valor >= 10 && valor < 20)
+{
+	Console.WriteLine("Valor é maior ou igual a 10 e menor que 20");
+}
+else
+{
+	COnsole.WriteLine("Valor é maior ou igual a 20");
+}
+// Cuidado ao gerar as expressões lógicas no 'else if', pois elas não podem se conflitar, ou seja, tenha um senso lógico. elas podem conflitar caso os dois blocos se encontrem como verdadeiro.
+Console.ReaKey();
+
+CONSOLE
+
+Valor é maior ou igual a 20
+
+
+				AULA: OPERADOR TERNÁRIO
+
+// Verifica uma condição e retorna um resultado ou outro de acordo com a condição, e tudo isso apenas em uma única linha.
+
+CÓDIGO DE AULA:
+
+int numero = 10;
+string mensagem = "";
+
+// condição ? true : false;
+
+/*
+if (numero > 5)
+{
+	mensagem = "Maior que 5";
+}
+else
+{
+	mensagem = "Menor que 5";
+}
+*/
+
+mensagem = numero > 5 ?  "Maior que 5" : "Menor que 5";
+
+Console.WriteLine(mensagem);
+console.ReadKey();
+
+CONSOLE:
+
+Maior que 5
+
+				AULA: EXERCÍCIO - CALCULAR IMC
+
+
+CÓDIGO DE AULA:
+
+Console.WriteLine("Informe o peso em kg: ");
+double peso = double.Parse(Console.ReadLine());
+Console.WriteLine("Informe a sua altura: ");
+double altura = double.Parse(Console.ReadLine());
+
+double ValorImc = peso / (altura ** 2);
+
+Console.WriteLine("O seu IMC é: " + ValorImc")
+
+if (valorIMC < 20)
+{
+	Console.WriteLine("\nIMC = " + valorImc + " -> abaixo do peso.");
+}
+else if ((ValorImc >= 20) && (ValorImc <= 24))
+{
+	Console.WriteLine("\nIMC = " + valorImc + " -> Normal.");
+}
+else if ((ValorImc >= 25) && (ValorImc <= 29))
+{
+	Console.WriteLine("\nIMC = " + valorImc + " -> Acima do peso.");
+}
+else if ((ValorImc >= 30) && (ValorImc <= 34))
+{
+	Console.WriteLine("\nIMC = " + valorImc + " -> Muito obeso.");
+}
+Console.ReadKey();
+
+				AULA: ESTRUTURA DE CONTROLE - SWITCH CASE
+
+CÓDIGO DE AULA:
+
+int escolha = 1;
+
+switch (escolha)
+{
+	case 1:
+		Console.WriteLine("Opção 1");
+		break;
+	case 2:
+		Console.WriteLine("Opção 2");
+		break;
+	case 3:
+		Console.WriteLine("Opção 3");
+		break;
+	case 4:
+		Console.WriteLine("Opção 4");
+		break;
+	default:
+		Console.WriteLine("Opção Default");
+		break;
+}
+Console.ReadKey();
+
+CONSOLE:
+
+Opção 1
+
+// Devemos ter um break, se não tivermos, ele vai combinar os códigos dos cases.
+
+
+				AULA: DECLARAÇÃO GOTO
+
+// A declaração goto transfere o controle do programa diretamente para uma instrução rotulada,
+Inicio:
+Console.Write("Escolha uma opção: ");
+int op = int.Parse(Console.ReadLine());
+int Valor = 0;
+
+Switch (op)
+{
+	default:
+		goto Inicio;
+		break;
+	case 1:
+		Valor += 100;
+		break;
+	case2:
+		Valor += 50;
+		goto case 1;
+}
+
+Console.WriteLine("Valor final " + Valor);
+Console.ReadKey();
+
+// Então basicamente, o 'goto' vai desviar o cminho do programa dentro da instrução switch.
+// Mas também podemos fazer com que, caso o usuário insira uma opção que não seja válida, o programa retorne para a primeira situação que é a de perguntar para o usuário escolher uma opção, especificando um label 'Inicio' no começo do programa e referenciando o 'Inicio' no goto.
+// Os Labels podem ser definidos especificando uma palavra que não seja um comando, e colocando dois pontos no final.
+
+				AULA: EXERCICIO - CALCULADORA
+
+
+// Vamos fazer uma calculadora simples:
+
+CÓDIGO DE AULA:
+
+Inicio:
+Console.Write("Digite o primeiro número: ");
+double num1 = double.Parse(Console.ReadLine());
+
+Console.Write("Digite o segundo número: ");
+double num2 = double.Parse(Console.ReadLine());
+
+Console.Write("Escolha a operação ( + - x / ): ");
+char op = char.Parse(Console.ReadLine());
+
+double resultado = 0;
+
+switch (op)
+{
+	default:
+		Console.WriteLine("Erro, opção inválida, pressione qualquer tecla: ");
+		Console.ReadKey();
+		goto Inicio;
+	case '+':
+		resultado = num1 + num2;
+		Console.WriteLine("Operação: +");
+		Console.WriteLine("Resultado: " + resultado);
+		break;
+	case '-':
+		resultado = num1 - num2;
+		Console.WriteLine("Operação: -");
+		Console.WriteLine("Resultado: " + resultado);
+		break;
+	case 'x':
+	case 'X':
+		resultado = num1 * num2;
+		Console.WriteLine("Operação: x");
+		Console.WriteLine("Resultado: " + resultado);
+		break;
+	case '/':
+		if (num2 == 0)
+                   	 {
+			Console.WriteLine("Error: o denominador não pode ser zero!. Pressione qualquer tecla");
+			Console.ReadKey();
+			goto Inicio;
+                    	}
+		resultado = num1 / num2;
+		Console.WriteLine("Operação: /");
+		Console.WriteLine("Resultado: " + resultado);
+		break;
+}
+Console.Write("Pressione qualquer tecla para finalizar o programa: ");
+Console.ReadKey();
+	
+
+
+				AULA: ESTRUTURA DE REPETIÇÃO (CICLO WHILE)
+
+// Como sabemos a estrutura repetição while, repete o seu bloco desde que a sua condição seja verdadeira, por esse motivo, por esse motivo, precisamos colocar arranjos de modo a uma hora do loop, tornar a condição falsa, se não, irá crachar o sistema.
+
+
+CÓDIGO DE AULA:
+
+int valor = 0;
+
+while (valor < 10)
+{
+	Console.WriteLine("O valor é " + valor);
+	valor ++;
+}
+
+Console.ReadKey();
+
+
+				AULA: ESTRUTURA DE REPETIÇÃO (CICLO DO-WHILE)
+
+CÓDIGO DE AULA:
+
+int valor = 0;
+
+do 
+{
+	Console.WriteLine("O valor é " + valor );	
+	valor++;
+} while (valor < 10);
+
+Console.ReadKey();
+
+				AULA: ESTRUTURA DE REPETIÇÃO (CICLO FOR)
+
+// lenght == tamanho
+// é possivel colocar mais variáveis na estrutura for.
+
+for (int i = 0, j = 10; i < 10; i++, j--)
+{
+	Console.WriteLine("I = " + i + "| J = " + j);
+}
+
+Console.ReadKey();
+
+CONSOLE:
+
+I = 0 | J = 10
+I = 1 | J = 9
+I = 2 | J = 8
+I = 3 | J = 7
+I = 4 | J = 6
+...
+I = 10 | J = 1
+
+				AULA: ESTRUTURA DE REPETIÇÃO (CICLO FOREACH)
+
+// Basicamente, o ciclo foreach executa um bloco de comandos a cada interação com uma estrutura/coleção
+
+string[] nomes = { "Lucas", "Gustavo", "Josy", "Thiago"};
+
+// Repare que ele não tem uma estrutura condicional, ele não vai ser verificado,
+// O que ele vai fazer é: parar a execução assim que chegar ao fim da sua coleção.
+// Repare: foreach (var item in collection). Em 'var' devemos colocar o tipo de valor que será retirado de uma respectiva coleção.
+// Ou seja, a cada passagem do 'foreach' ele vai retirar um item da nossa coleção, e colocar na variável 'nome'.
+
+foreach (string nome in nomes)
+{
+	Console.WriteLine("Nome: " + nome);
+}
+
+Console.ReadKey();
+
+
+				AULA: EXERCÍCIO - SEQUÊNCIA DE FIBONACCI
+
+
+// Fibonacci é uma sequência onde cada número é igual a soma dos seus dois antecessores.
+// 0 1 1 2 3 5 8 13 21 34 ...
+
+DO JEITO QUE EU FIZ:
+
+
+int a = 0, b = 1, c = 0;
+
+Console.WriteLine("Sequência Fibonacci. Pressione qualquer tecla: ");
+Console.ReadKey();
+Inicio:
+Console.Write("Informe o tamanho da sequência de Fibonacci: ");
+int tamanho = int.Parse(Console.ReadLine());
+
+Console.Write(a + " , ");
+Console.Write(b + " , ");
+for (int i = 1; i <= tamanho-2; i++)
+{
+                if (i == tamanho - 2)
+	{
+                    c = a + b;
+                    Console.Write(c);
+	}
+                else
+                {
+                    c = a + b;
+                    Console.Write(c + " , ");
+                    a = b;
+                    b = c;
+                }
+                
+}
+Console.WriteLine("\nPressione qualquer para finalizar o programa, caso queira continuar, pressiona 's':");
+string cont = Console.ReadLine();
+if (cont == "s")
+{
+                goto Inicio;
+}
+else
+{
+
+}
+           
+
+CÓDIGO DE AULA:
+
+int a = 0; b = 1, c = 0;
+
+Console.Write("Quantos valores: ");
+int valores = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Sequência de Fibonacci com " + valores + " valores");
+
+for (int i = 0; i < valores; i++)
+{
+	if (i < valores - 1)
+	{
+		Console.Write(a);
+	}
+	else
+	{
+	Console.Write(a + ", ");
+	}
+
+	c = a + b;
+	a = b;
+	b = c;
+	
+}
+Console.ReadKey();
+
+
+					AULA: PROGRAMAÇÃO ORIENTADA A OBJETOS
+
+O QUE É PROGRAMAÇÃO ORIENTADA A OBJETOS?
+
+Programação orientada a objetos é um paradigma de programação baseado no conceito de "objetos", que podem conter dados na forma de campos, também conhecidos como atributos, e códigos, na forma de procedimentos, também conhecidos como métodos.
+
+Orientação a objeto é um conceito que está relacionado com a ideia de classificar, organizar e abstrair coisas.
+
+Na definição formal: "O termo orientação a objetos significa organizar o mundo real como uma coleção de objetos que incorporam estrutura de dados e um conjunto de operações que manipulam estes dados".
+
+Uma classe é uma forma de deifnir um tipo de dado em uma linguagem orientada a objeto, ela é formada por dados e comportamentos.
+
+Para definir os dados são utilizados os atributos, e para definir o comportamento são utilizados métodos.
+
+Depois que uma classe é definida podem ser criados diferentes objetos que utilizam a classe.
+
+// Objetos são muito importantes, pois podemos usar na programação e reutilizar os códigos, diminuindo o tempo de programação.
+
+
+					AULA: CLASSES E OBJETOS (POO)
+
+
+// Numa linguagem de programação orientada a objetos trabalhamos o tempo todo com classes.
+// Por exemplo, quando estamos utilizando o Visual Studio, automaticamente o programa cria a classe 'Program', que possui a funcionalidade principal que é definir o comportamento do nosso programa através da execução do método Main.
+// E para cada classe ela contém uma finalidade. Na programação orietada a objetos, para cada classe, temos um tipo e uma funcionalidade.
+// Temos muitas classes pré-definidas como a classe console que possui métodos necessários como o método 'WriteLine' e 'ReadKey'.
+
+// E como definimos uma nova classe?
+	Utilizamos a palavra 'class', e podemos definir uma nova classe, dentro do mesmo arquivo de código-fonte que já conter outra classe, no entanto, fora de outra classe declarada.
+
+// Depois de definirmos a nossa classe, podemos referenciá-la dentro static void Main. 
+
+// Outra coisa muito importante: não criamos as classes dentro de um mesmo arquivo de código fonte como no exemplo, contendo outra class, apenas por questão de organização. Normalmente criamos um arquivo separado para cada classe, apesar de não ser obrigatório.
+
+CÓDIGO DE AULA:
+
+class Program
+{
+	static void Main(string[] args)
+	{
+		MinhaClasse mClasse = new MinhaClasse();
+		MinhaClasse m2 = null;
+
+           	 	OutraClasse outra = new OutraClasse();
+         		OutraClasse outra2 = outra;
+	}
+}
+
+class MinhaClasse
+{
+	
+}
+
+// Repare que não definimos nenhum elemento/atributo ou método da nossa classe, porém vamos aprender nas próximas aulas, os métodos e atributos devem ser colocado no escopo da MinhaClasse.
+
+// Objetos são variáveis do tipo não primitivo.
+
+// Na video-aula mostra como criar uma nova classe com um novo arquivo, dentro de um namespace do mesmo projeto, podendo assim ser referenciada a nova classe no escopo do static void Main.
+
+// No static void main estamos definindo um objeto que se chama 'mClasse' com o new MinhaClass();
+
+// E assim criamos o m2 com o valor null, que significa que o objeto está vazio, que o objeto ainda não foi inicializado.
+
+// Neste exemplo: OutraClasse outra = new OutraClasse();
+         		OutraClasse outra2 = outra;
+ Quando igualamos um objeto a outro não estamos igualando o seu valor em si, mas sim a sua referência.
+
+
+					AULA: ATRIBUTOS DAS CLASSES
+
+// Um atributo é um campo que vai representar que tipo de atributo aquele objeto pode ter.
+
+					AULA: PASSAGEM DE METODOS POR VALOR E POR REFERÊNCIAS
+
+// Quando igualamos uma variável do tipo primitiva à outra, estamos atribuindo o valor de b em a, e b não sofre quaisquer mudanças quando mexemos em a, e assim por diante, por outro lado, é possivel atribuir também b em a por referência, que é o caso das classes e objetos, que são dos tipos não primitivos, com isso, ao fazermos alterações em a, estaremos alterando também os valores de b.
+
+// A declaração void, significa que o nosso método não terá um retorno, ou o retorno dele será vazio.
+
+
+					AULA: MÉTODOS COM RETORNO DE VALORES
+
+// Quando não há retorno, sabemos que temos que colocar na declaração de metodo, o termo 'void'. No entanto quando há um tipo de retorno, devemos especificar o tipo de variável que você quer que o método retorne.
+
+// Podemos passar um tipo e retornar outro tipo de variavel, não necessariamente precisa ser do mesmo tipo.
+
+// Os métodos com retorno de valor precisam ser armazenados em variáveis, pois se não, os seus valores serão perdidos.
+
+CÓDIGO DE AULA:
+
+Classe Metodo
+// Metodos com retorno de valores
+public string MontaNome(string nome, string sobrenome)
+{
+	string nomeCompleto = nome + " " + sobrenome;
+	return nomeCompleto;  // Poderia também: return nome + " " + sobrenome;
+}
+
+public int CodigoChar(char caractere)
+{
+	// int codigo = caractere;
+	return caractere;
+}
+
+public double ValorPI()
+{
+	return 3.1415;
+}
+
+
+					AULA: SOBRECARGA DE MÉTODOS (OVERLOADING)
+
+// sobrecarga de métodos nada mais é do que criar o método com varias outras assinaturas.
+
+// O Console.WriteLine() por exemplo possui varias assinaturas, WriteLine é só uma delas.
+
+// Colocar um retorno ou não, não vai modificar em nada, o importante é que se tenha uma passagem de parâmetros diferente da que já foi declarada, pode ter mais ou menos ou até mesmo na mesma quantidade, mas precisam ser diferentes.
+
+					AULA: UTILIZANDO O TERMO THIS
+
+// O termo this (este em português) faz referência a classe onde ele está sendo instanciado, por isso quando colocamos this.senha como mostrado no exemplo, estmos referencia a respectiva senha daquela classe.
+
+// Ou seja, ele funciona como um seletor de elementos dentro de uma classe, e consegue pegar nomes de variáveis e diferenciar umas das outras mesmo que seus nomes sejam iguais.
+
+
+					AULA: DELEGATES
+
+// Delegate é um tipo de dado criado por nós mesmos, que serve para armazenar referências de métodos que tem o mesmo formato que foi declarado, ou seja, o mesmo tipo de retorno e o mesmo tipo de assinatura.
+
+// Ou seja, para funcionar o tipo delegate, é preciso que ele tenha o mesmo retorno e a mesma assinatura que o método que queremos especificar.
+
+// Assim ao invés de usarmos os métodos em si, podemos usar os delegates para facilitar o nosso código e manipular a variável consequentemente o método. E dali podemos mudar os valores a qualquer momento do programa.
+
+// Assim como os structs, devemos declará-los na raiz da nossa classe para que podemos referênciá-lo no static void main.
+
+// O que se destaca em utilizar o Delegate, é que ele é uma variável, por isso eu posso usar o operador de atribuição, e continuar atribuindo métodos à ele. Eu também consigo retirar os métodos com o operador '-='.
+
+
+					AULA: MÉTODO CONSTRUTOR DE UMA CLASSE
+
+// Um metodo construtor é um método que vai ser executado sempre na instanciação do objeto dessa classe, para que ele possa sempre construir todos os itens necessários para a nossa classe funcionar.
+
+
+					AULA: SOBRECARGA COM MÉTODO CONSTRUTOR (OVERLOADING)
+
+// sobrecarga com método constutor nada mais é do que escrever o mesmo metodo construtor só que com parãmetros/assinaturas diferentes.
+
+
+					AULA: CLASSES ESTÁTICAS
+
+// Classes estáticas é basicamente uma classe da qual não podemos instanciar os seus métodos, para acessar os seus membros sejam métodos ou atributos, utilizamos a própria classe como referência diretamente, e por ela ser estática ela fica visível em toda a nossa programação. Todo o projeto e todas as classes conseguem utilizar essa classe diretamente, e sendo assim, se a qualquer ponto do projeto fizermos alteração nessa classe, isso afetará para todo mundo que utilizar aquele membro daquele ponto em diante.
+
+// Imaginamos que queremos criar uma taxa para não só uma classe do nosso projeto utilizar, mas diversas classes do nosso projeto em si, utilizar aquela taxa fixa. Podemos criar as classes estáticas que pode criar métodos e atributos fixos, para demais classes também utilizar do seu valor.
+
+// Para isso, basta definir static antes do internal class nomeDaClasse, no entanto se apenas deixarmos assim, erros aparecerão, pois todos os membros, atributos e métodos devem ser estáticos também. Basta colocar static depois do modificador de acesso (ex.: public) e antes do tipo de retorno/tipo de variável/void etc..
+
+// Para acessar os seus membros, basta referenciar a sua classe, e ponto para acessar os seus membros e atribuir valor.
+
+// Podemos utilizar esse tipo de classe para projetos que possuem configurções globais em toda a nossa aplicação.
+
+
+
+					AULA: MEMBROS ESTÁTICOS
+
+// Membros estáticos nada mais é do que membros no formato estático, porém dentro de uma classe que não é estática
+
+// Uma classe que não é estática ela pode conter membros comuns, que são instaciados num objeto, e membros estáticos que são acessados diretamente na classe, e não vão aparecer nos objetos dessas classes
+
+
+					AULA: CLASSES PARCIAIS
+
+
+// Uma classe parcial nada mais é do que um recurso que o C# nos permite de separar classes em mais de uma parte, isso acontece muito em uma classe que é muito extensa, que tenhamos ali muitos membros, e poderemos separar essa classe em várias partes, para que possamos nos organizar melhor, por exemplo, colocar os arquivos em uma parte dessa classe somente os atributos, em outtra parte, apenas os métodos, e assim por diante, ou dividir uma classe em partes que fazem referência às suas respectivas funções em determinado projeto. E a classe seria tratada apenas como uma única classe.
+
+// No exemplo de aula, vamos dividir a nossa classe em duas partes, em uma parte somente terá os atributos dessa classe, e na outra parte terá somente os métodos da classe.
+
+// Para fazer isso criamos pedaços de classes diferentes que unimos com os outros pedaços atribuindo o mesmo nome para todas, no exemplo está Pessoas, e antes de class atribuimos o nome partial.
+
+
+					AULA: PROPRIEDADES DA CLASSE (GET - SET)
+
+
+// Uma propriede  de uma classe combina aspectos de campos e métodos, ela é acessada do mesmo modo em que acessamos os seus campos e atribuimos os seus valores, porém ela tem as propriedades de um método de poder controlar o seu acesso.
+
+// Normalmente quando definimos os campos em uma classe definimos ele com 'private' ( que significa que só pode ser acessado/modificiado dentro da nossa classe), para não dar acesso a esses campos/atributos diretamente, assim podemos controlar o seu acesso com as propriedades da classe (get - set). E os nomes desses campos, por padrão inicializamos ele com underline.
+
+// Normalmente o nome das propriedades são parecidos com o nome dos nossos campos, e devem começar com letra maiúscula.
+
+// A propriedade get tem a função de retornar um certo valor
+
+// A propriedade set tem a função de atribuir um valor para o meu campo/atributo.
+
+// Podemos também definir propriedades como definimos campos:
+
+public string Sobrenome { get; } = "Lima";   // Deve ser public para termos acesso em outras classes.
+
+// Nesse caso, não é necessário que montemos toda a estrutura do programa, para que ele saiba diferenciar as funções get e set umas das outras. Nesse exemplo tiramos o set, ou seja a capacidade de atribuir um valor, e definimos um valor fixo que só pode ser alterado nessa classe Propriedades.
+
+
+					AULA: ENCAPSULAMENTO
+
+
+// Encapsulamento é separar o prgrama em partes o mais isoladas possíveis, é o processo de ocultar ou esconder os membros de uma classe do acesso exterior usando modificadores de acesso. O encapsulamento fornece uma maneira de preservar a integridade do estado dos dados, ao invés de definirmos os campos publicos por exemplo, devemos definir campos de dados privados.
+
+// O perigo de não encapsular é que mesmo que separarmos as partes do código com suas funções, é possivel alterarmos a variável do código posteriormente, e comprometer toda a estrutura código, por não estar reservado. Além disso, imagine que temos que atribuir uma operação em nosso projeto, agora imagine que esse mesmo projeto tem que ser implementado em diversos sistemas, se não houvesse o encapsulamento, teríamos que fazer tudo isso manualmente, configurar um sistema por sistema.
+
+// Podemos encapsular apenas atribuindo operações/expressões dentros dos métodos das classes.
+
+// Outra forma de deixar o nosso código encapsulado e seguro, é declarar os tipos de atributos da nossa classe em 'private' para não deixar explícito e não ser alterado. E assim, precisamos criar os métodos que dêem acesso a isso, mas de uma forma controlada.
+
+// O que não foi dito na aula de propriedades é que na propriedade set, podemos ter também o 'private set', que quer dizer que não podemos modificar o seu valor nas  outras classes, apenas na que foi criada tal propriedade.
+
+// Entao encapsular é isso, é tratar a nossa classe expondo o que precisa ser feito mas não de como isso é feito.
+
+
+
+					AULA: HERANÇA
+
+// Herança é um dos conceito mais importante na programação orientada a objetos, porque nos permite que uma classe herde métodos e atributos, ou certos comportamentos de uma outra classe, e com isso, ter um reaproveitamento muito grande de código, além de facilitar na sua manuntenção.
+
+// Muitos veículos são similares não é mesmo? Por esse motivo, poderíamos definir características similares colocando essas características numa classe pai. E assim, ao invés de aplicarmos características por características em cada classe, poderíamos herdar as características de uma classe pai.
+
+// Para definir  herança coloque dois pontos após o nome da classe
+
+
+					AULA: CLASSES ABSTRATAS
+
+
+// A classe abstrata tem uma ligação direta com a herança, o modificador abstrato indica que o item que está sendo modificado tem uma implementação ausente ou incompleta, uma declaração de classe abstrata indica que a classe se destina somente a ser uma classe base de outras classes não instaciada por conta própria. Ou seja, classes abstratas não implementam objetos no nosso projeto apenas servem de base para outras classes.
+
+// Membros marcados como abstratos precisam ser implementados por classes não abstratas, que derivam das classes abstratas, isso quer dizer que, os atributos/métodos que derivam das classes abstratas são genéricos, e como terá classes que trataremos esses mesmos atributos/métodos de forma particular, precisamos configurar eles nas suas respectivas classes, por isso que podemos tornar esses membros abstratos, que significa que eles devem ser implementados, mas modificáveis.
+
+// Quando um membro é abstrato, ele não pode ter implementação na classe pai (a que serve de base para as outras), o que significa que todas as classes filho do projeto herdarão aquele atributo/método, mas sem código dentro dele, o código iremos atribuir classe por classe.
+
+// Membros abstratos precisam ser declarados da seguinte forma na classe abstrata/classe base.
+
+ex.: 
+	public abstract void NomeDaClasse();
+
+// eles não tem escopo, e precisa ser declarado o 'abstract' depois do public/private.
+
+// Em cada classe, declaramos:
+
+ex.:
+	public override void NomeDaClasse()
+	{
+
+	}
+
+// Aqui já possui um escopo, e possui uma declaração diferente chamada de 'override', que quer dizer que está senddo sobrescrito.
+
+// Veremos em aulas futuras mas vamos ver o polimorfismo que está relacionado com a herança.
+
+
+					AULA: CLASSES SEALED
+
+
+// Os tipos sealed (lacrado) também está um pouco relacionado com a herança.
+
+// O modificador sealed quando aplicado a uma classe impede que outras classes herdem dela. Então na prática ela ocorre o inverso do modificador abstrato. O tipo abstract diz que aquela classe somente pode ser herdada, já o tipo sealed, diz que aquela classe não pode ser herdada, ela pode sim receber herança.
+
+// No exemplo criamos a classe chamada Caminhonete, que é um tipo de carro, por sua vez, podemos fazer a classe Caminhonete herdar as características da classe Carro, que por sua vez, herda características de  veiculos, chamamos esse processo de herança múltipla.
+
+
+					AULA: MEMBROS SEALED
+
+// Os membros sealed funciona semelhante como as classes, só que nesse caso, para métodos e atributos, ele faz com que os membros não possam herdar as características dos atributos/métodos que foram declarados com sealed.
+
+//Na aula vamos nos deparar com o seguinte código:
+
+public virtual void Cabelos()
+{
+	Console.WriteLine("Humanos.Cabelos");
+}
+
+// Esse código foi colocado em uma nova classe chamada Classes que possui várias classes.
+// O interessante dele é a declaração 'virtual' que funciona como o abstract de membros, só que com mais propriedades. O método abstract diz que podemos utilizar o membro nas outras classes que irão herdar da classe pai, só que as configurações dentro do método/atributo vão ser codificados dentro das respectivas classes, e isso se aplica mais para casos em que queremos especificar configurações gerais mas com certas particularidades, neste caso, não podemos atribuir configurações na classe pai (a que serve de base), em membros declarados abstract, já no virtual podemos, tudo o que abstract faz o virtual faz, só que se quisermos preservar algumas configurações gerais, podemos configurar sem medo de errar.
+
+
+					AULA: MODIFICADORES DE ACESSO
+
+// Modificadores de acesso serve para modificar a visibilidade, os tipos de acessos que os membros daquela classe vão ter
+
+// O public como sabemos servem para deixar visível e acessivel os metodos e atributos em todos os lugares que as classes for utilizada tanto na herança, quanto nos objetos criados por essa classe.
+
+// Com os modificadores de acesso podemos controlar para deixar visível apenas para algumas classes, e para outras não.
+
+// Modificadores de acesso visto na aula: protected, internal
+
+// O termo protected se substituido pelo private permite deixr visível o membro apenas para quem herdar dessa classe, ou seja da classe que está utilizando o protected, somente os objetos que são instaciados dessa classe é que não terão/estarão acesso/visíveis.
+
+// internal quer dizer que o membro será restrito ao mesmo assembly, ou seja, se for criado uma DLE (biblioteca criada a partir dessa classe, para que possamos utilizála em outras aplicações) dessa classe, esse internal não poderia ser utilizado, no internal fica visível como nos public, só que está visível dentro dessa compilação.
+
+
+					AULA: POLIMORFISMO
+
+
+// Polimorfismo (muitas formas) é o princípio de que duas ou mais classes, derivadas de uma mesma classe base podem invocar métodos que tenha a mesma identificação/assinatura mas comportamentos diferentes, especializado para cada classe derivada, usando para tanto, uma referência a um objeto do tipo superclasse. Em resumo, um objeto criado utilizando o polimorfismo, ele pode ter comportamentos diferentes dependendo da forma de como ele foi instaciado.
+
+// Tudo que estávamos fazendo com as declarações virtual e abstract, era polimorfismo.
+
+// É possivel também, mesmo depois de utilizar o código sobrescrito da classe base pela nova classe, utilizar o código da classe base, ou seja, os dois ao mesmo tempo, sem precisar ficar escrevendo um por um. Basta apenas:
+
+// base.NomedoMetodo();
+
+// Em certo momento da aula você vai se deparar com o seguinte código:
+
+// Forma b = new Triangulo();
+
+// Aí você pensa, mas no lugar de Forma não vai o Triangulo?  Ahh jovem mancebo!!!, é aí que entra o Polimorfismo. Em essência a classe Triangulo é a classe Forma, pois todos os membros pertencentes em Triangulo também pertence a Forma, se houvesse um elemento que existe em Triangulo mas não existe em Forma, tenha certeza, que esse pedaço desse código daria em erro, o que não ocorre. Mas não alteramos, o polimorfismo permite a alteração, o que não permite é a declaração de novos membros.
+
+
+
+				AULA: INTERFACES
+
+
+// Interface está relacionaod ao polimorfismo
+
+// Interface é um tipo de classe que está completamente abstrata. Lembramos das classes que eram abstract, e com elas formamos métodos que poderiam ou não ser abstratos, podendo ou não ser sobrescritos para as classes que herdam. Interface é como se a classe que implementa aquele interface, ou seja, que herda daquele interface (uma espécie de classe, mas diferente, completamente abstrata), ela assume um contrato, onde diz que tem que implementar todos os seus membros, inclusive eu não consigo declarar os seus membros como abstracts, porque por natureza, todos os seus membros são abstratos, quem herdar das interfaces, devem - sem excessão - implementar todos os seus membros, aplicando configurações próprias para cada classe.
+
+// De modo padrão, começamos o nome de uma interface com 'I' maiúsculo, pois as interfaces são bem semelhantes a uma classe.
+
+// Não é necessário especificar o modificador de acesso nas interfaces, porque por padrão todos os membros, são inicializados como public. 
+
+
+				AULA: RECURSIVIDADE
+
+
+Em ciência da computação, a recursividade é a definição de uma subrotina (função ou método) que pode invocar a si mesma para resolver um determinado problema.
+
+// Podemos utilizar a recursividade dentro do nosso método da seguinte forma:
+
+Nomedometodo( parametro, n -1 );
+
+// Por meio disso, conseguimos fazer ele executar o metodo varias vezes, mas isso não controla ele, ou seja, se iniciarmos o programa resultará em loop, por isso deve-se colocar uma estrutur de condição 
+
+if ( n > 0 )
+{
+	Console.WriteLine("Olá Mundo");
+	Nomedometodo( parametro, n -1 );
+}
+
+
+				AULA: ARGUMENTOS DO MÉTODO MAIN
+
+
+// O método main tem um argumento que está sendo passado que é um array de strings que se chama args, e esse array de strings é atribuido a ele quando inserimos argumentos na execução do nosso programa. Esses argumentos podem ser passados em qualquer quantidade, e conforme são passados no corpo do método vão sendo atribuidos  no array args
+
+
+				AULA: WINDOWS FORM APP - INTRO
+
+// Windows form applications são janelas de formularios que normalmente possuem um formato retangular, que possuem barras de menu, de acordo com a sua finalidade. Elas são dispostas em um monitor de acordo com os sseus pixels.
+
+// A largura e a altura é medida em pixel.
+
+// Todos os controles são objetos derivados de classes, que podemos alterar, com o conhecimento que aprendemos com programação orientada a objetos.
+
+
+				AULA: ACESSANDO AS PROPRIEDAS DAS FORMS PELO CÓDIGO FONTE DO PROJETO
+
+// Cada propriedade do projeto podemos acessar pelo código fonte do projeto, no entanto, deve-se atentar ao quanto o uso dessa propriedade, repara se a mesma é do tipo get-set, se pode ou não retornar um valor, se é do modo struct, ou seja, respeitando o cada tipo da variável, e assim por diante.
+
+				AULA: EVENTOS DAS FORMS
+
+// Outra parte importante da aba propriedades no visual studio, é a parte de 'Eventos'. Eventos acontecem em determinadoo momento da form, na linguagem de programação, os objetos de ambiente gráfico, vão ter o que chamamos de escutadores, que indicam que estão 'escutando' todos os movimentos, ou seja, irão escutar o carregamento, o fechamento, o redimensionamento.
+
+// Quando disparado um evento, por exemplo o Load, será disparado também todos os métodos e propriedades que estiverem associados ao evento.
+
+DIFERENÇA ENTRE MÉTODO  E EVENTO
+
+	Qualquer método ao ser criado pode ser relacionado a um evento, que o dispara. Eventos ocorrem na execução do carregamento de certas aplicações.
+
+// Para cada tipo de evento o tipo de assinatura do método pode ou não mudar, então se atente quanto a isso.
+
+// Para retirarmos um metodo do evento, não basta apenas apagálo do código fonte, para isso, é necessário que PRIMEIRO, retire o método do evento, e só depois apague-o.
+
+// Caso tenha primeiro apagado no código fonte e depois queira retirar do evento, gerará um ERRO, para corrigir vá até a parte form.Designer.cs do projeto, e apague a área que estiver em vermelho.
+
+
+				AULA: PROPRIEDADES DOS CONTROLES
+
+
+// Os controles nada mais são do que os componentes que vão fazer parte da nossa interface gráfica, que são objetos derivados de classes específicas. Como qualquer objeto, ele possui métodos, atributos e propriedades.
+
+
+				AULA: EVENTOS DOS CONTROLES
+
+// Como nas forms, os controles também possuem eventos, que por sua vez, disparam métodos, para chegar ao resultado esperado.
+
+// Para referenciarmos os controles, apenas colocamos o nome dele no código fonte, coloca-se o ponto para acessar as propriedades/métodos/atributos e atribuimos um valor.
+
+
+				AULA: SISTEMA CADASTRO PARTE 2
+
+// Nessa aula vamos ver conceitos novos, por isso eu achei importante anotar:
+
+Conceitos novos:
+
+- List : é coleção de dados que podemos agrupar informações que estão relacionadas entre si.  Com isso, tem se que ela pode ser declarada da seguinte maneira:
+
+CÓDIGO DE AULA:
+
+List<Pessoa> pessoas;
+
+// Nessa declaração precisamos colocar o tipo de dado entre o maior e menor que, e depois declarar nome da lista que está sendo criada.
+
+// Mas classe é um tipo de dado?
+
+// Assim como o struct, que define 'objetos' como sendo tipos de dados, as classes também apresentam essa função.
